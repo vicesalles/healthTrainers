@@ -1,0 +1,62 @@
+@import './parcials/colors';
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: $fons;
+}
+
+header{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h1{
+        color:$principal;
+    }
+    h2{
+        color:$secundari;
+    }
+    .CTA{
+        text-decoration: none;
+        color: white;
+        background-color: $principal;
+        padding: 1em 2em;
+        border-radius: 14px;
+        box-shadow: $secundari 0.1em 0.5em 1em;
+        &:hover{
+            box-shadow: $secundari 0em 0em 0.5em;
+        }
+    }
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    article{
+        display: flex;
+        justify-content: center;
+        h1{
+            color:$principal;
+        }
+        section{
+
+        }
+    }
+}
+
+footer{
+    background-color: $secundari;
+}
+
+/* DESKTOP ONLY*/
+@media only screen and (min-width: 1280px) {
+
+
+    
+
+}

@@ -1,0 +1,19 @@
+{
+  "name": "healthttrainers",
+  "version": "1.0.0",
+  "description": "Projecte per al màster Educació i TIC de la Universitat Oberta de Catalunya.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vice Sallés <hola@vicesalles.me> (http://vicesalles.me)",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
