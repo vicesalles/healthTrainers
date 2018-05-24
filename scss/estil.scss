@@ -1,7 +1,12 @@
 @import './parcials/colors';
+@import './parcials/fonts';
+@import './parcials/mixins';
+
 
 body{
-    width: 100vw;
+    width: 100%;
+    margin-top:0px;
+    margin-left: 0px;
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
     background-color: $fons;
@@ -9,10 +14,14 @@ body{
 
 header{
     display: flex;
-    width: 100vw;
+    height: 100vh;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
+    background-image: url("../img/QuinDombrowski.jpg");
+    background-size: cover;
     h1{
         color:$principal;
     }
@@ -34,29 +43,60 @@ header{
 main{
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    flex-flow: wrap;
+    flex-direction: row;    
+    justify-content: space-between;
+
     article{
-        display: flex;
+        display: flex;    
         justify-content: center;
+        flex-direction: column;
+        width: 25%;
+       
+        &.targeta{
+            @include targeta();           
+        }
         h1{
             color:$principal;
+        }        
+        &.container{
+            flex-direction: row;
+            section{
+                @include targeta();
+            }
         }
-        section{
 
+        &.sencer{
+            width: 100%;
+            margin-top:1em;
         }
     }
 }
 
 footer{
+    margin-top: 2em;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding: 0.1em 0.5em 0.5em 0.5em;
+    font-size: 9px;
     background-color: $secundari;
 }
 
 /* DESKTOP ONLY*/
-@media only screen and (min-width: 1280px) {
-
-
-    
-
+@media only screen and (max-width: 1200px) {
+ main{
+    justify-content: flex-start;
+    article{
+        width: 25%;
+    }
 }
+}
+
+@media only screen and (max-width: 900px) {
+    main{
+       justify-content: center;
+       article{
+           width: 100%;
+       }
+   }
+   }
