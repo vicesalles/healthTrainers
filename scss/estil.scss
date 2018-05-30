@@ -5,6 +5,7 @@
 
 body{
     width: 100%;
+    height: 100vh;
     margin-top:0px;
     margin-left: 0px;
     overflow-x: hidden;
@@ -21,12 +22,22 @@ header{
     text-align: center;
     justify-content: center;
     background-image: url("../img/QuinDombrowski.jpg");
+    box-shadow: $principal 0em 0.5em 1em;
     background-size: cover;
     h1{
         color:$principal;
+        margin-bottom: 0.2em;
+        font-size: 3em;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 0.2em 0.5em;
+        
     }
     h2{
+        margin-top:0.2em;
+        margin-bottom:1em;
         color:$secundari;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 0.2em 0.5em;
     }
     .CTA{
         text-decoration: none;
@@ -34,8 +45,9 @@ header{
         background-color: $principal;
         padding: 1em 2em;
         border-radius: 14px;
-        box-shadow: $secundari 0.1em 0.5em 1em;
+        box-shadow: $secundari 0em 0.3em 0.7em;
         &:hover{
+            background-color:$secundari;
             box-shadow: $secundari 0em 0em 0.5em;
         }
     }
@@ -44,59 +56,78 @@ main{
     width: 100%;
     display: flex;
     flex-flow: wrap;
-    flex-direction: row;    
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 
-    article{
-        display: flex;    
-        justify-content: center;
+    .wrapper{
+        width: 98%;
+        display: flex;
         flex-direction: column;
-        width: 25%;
-       
-        &.targeta{
-            @include targeta();           
-        }
-        h1{
-            color:$principal;
-        }        
-        &.container{
+        margin-top: 2em;
+        .row{
+            display: flex;
             flex-direction: row;
-            section{
-                @include targeta();
-            }
+            justify-content: space-between;            
+            flex-wrap: nowrap;
         }
 
-        &.sencer{
-            width: 100%;
-            margin-top:1em;
+        article{
+            
+            display: flex;    
+            justify-content: center;
+            flex-direction: column;
+            flex-grow: 1;
+            max-width: 28%;
+            
+        
+            &.targeta{
+                @include targeta();           
+            }
+            h1{
+                color:$principal;
+            }        
+            &.container{
+                flex-direction: row;
+                section{
+                    @include targeta();
+                }
+            }
+
+            &.sencer{
+                width: 100%;
+                margin-top:1em;
+            }
         }
     }
 }
 
 footer{
-    margin-top: 2em;
+    margin-top: 3em;
     margin-left: 0px;
     margin-bottom: 0px;
-    padding: 0.1em 0.5em 0.5em 0.5em;
+    padding: 0.1em 0.5em 0.5em 1em;
     font-size: 9px;
     background-color: $secundari;
 }
 
-/* DESKTOP ONLY*/
-@media only screen and (max-width: 1200px) {
- main{
-    justify-content: flex-start;
-    article{
-        width: 25%;
-    }
-}
-}
-
+/* LIL SCREENS*/
 @media only screen and (max-width: 900px) {
     main{
+       width: 100%;
        justify-content: center;
-       article{
-           width: 100%;
-       }
+       .wrapper{
+            .row{
+                width: 98%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            article{
+                width: 90%;
+                max-width:90%;
+                flex-grow: 1;
+            }
+        }
    }
    }
