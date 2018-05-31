@@ -30,6 +30,7 @@ header{
         font-size: 3em;
         background-color: rgba(255, 255, 255, 0.6);
         padding: 0.2em 0.5em;
+        font-family: 'Oswald', sans-serif;
         
     }
     h2{
@@ -38,10 +39,14 @@ header{
         color:$secundari;
         background-color: rgba(255, 255, 255, 0.8);
         padding: 0.2em 0.5em;
+        font-family: 'Oswald', sans-serif;
+        font-weight: bold;
     }
     .CTA{
         text-decoration: none;
         color: white;
+        font-family: 'Oswald', sans-serif;
+        font-weight: bold;
         background-color: $principal;
         padding: 1em 2em;
         border-radius: 14px;
@@ -67,6 +72,7 @@ main{
         .row{
             display: flex;
             flex-direction: row;
+            width: 100%;
             justify-content: space-between;            
             flex-wrap: nowrap;
         }
@@ -74,7 +80,8 @@ main{
         article{
             
             display: flex;    
-            justify-content: center;
+            justify-content: flex-start;
+            align-items: center;
             flex-direction: column;
             flex-grow: 1;
             max-width: 28%;
@@ -85,6 +92,8 @@ main{
             }
             h1{
                 color:$principal;
+                font-family: 'Oswald', sans-serif;
+                font-weight: bold;
             }        
             &.container{
                 flex-direction: row;
@@ -95,12 +104,58 @@ main{
 
             &.sencer{
                 width: 100%;
+                max-width: 100%;
                 margin-top:1em;
             }
         }
     }
 }
 
+.programa{
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:1em;
+
+    .programacio-container{    
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        @include targeta(); 
+        max-width: 100%;
+        .programacio-cap{
+            h1{
+                margin-top:0.2em;
+            }
+        }
+
+        .programacio-cos{
+            width: 100%;            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 100%;
+            .setmana{
+                width: 20%;
+                flex-grow: 2;
+                margin-left: 1em;
+                margin-right: 1em;
+                margin-bottom: 1em;
+                padding: 0.5em 1em 1em 1em;
+
+                background-color: lighten($color: $secundari, $amount: 50);
+                h2{
+                    font-family: 'Oswald', sans-serif;
+                    font-size: 1.2em;
+                    color: $secundari;
+                }
+            }
+        }
+    }
+
+}
 footer{
     margin-top: 3em;
     margin-left: 0px;
@@ -109,6 +164,9 @@ footer{
     font-size: 9px;
     background-color: $secundari;
 }
+
+
+
 
 /* LIL SCREENS*/
 @media only screen and (max-width: 900px) {
@@ -124,10 +182,28 @@ footer{
                 flex-wrap: wrap;
             }
             article{
-                width: 90%;
+                
                 max-width:90%;
                 flex-grow: 1;
             }
+
+            
         }
    }
+   .programa{
+       width: 100%;
+       .programacio-container{
+            .programacio-cos{
+                width: 98%;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                .setmana{
+                    width: 100%;
+                }
+            }       
+        }
+   }
+   
+
    }
