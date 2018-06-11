@@ -222,11 +222,15 @@ footer {
   width: 90px;
   padding-bottom: 10px; }
   .logo img:hover {
+    margin-top: 25px;
     width: 93px;
     padding-bottom: 7px; }
 
 .socialMedia {
   margin-top: 2em; }
+  .socialMedia a {
+    cursor: pointer;
+    color: #bbdef0; }
   .socialMedia img {
     width: 52px;
     padding-left: 10px;

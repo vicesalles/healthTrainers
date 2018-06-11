@@ -171,6 +171,7 @@ footer{
         width: 90px;
         padding-bottom: 10px;
         &:hover{
+            margin-top:25px;
             width: 93px;
             padding-bottom: 7px;
         }
@@ -179,6 +180,10 @@ footer{
 
 .socialMedia{
     margin-top:2em;
+    a{
+        cursor:pointer;
+        color:$fons;
+    }
     img{
         width: 52px;
         padding-left:10px;
