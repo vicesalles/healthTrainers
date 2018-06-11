@@ -165,7 +165,31 @@ footer{
     background-color: $secundari;
 }
 
+.logo{
+    img{
+        margin-top: 25px;
+        width: 90px;
+        padding-bottom: 10px;
+        &:hover{
+            width: 93px;
+            padding-bottom: 7px;
+        }
+    }
+}
 
+.socialMedia{
+    margin-top:2em;
+    img{
+        width: 52px;
+        padding-left:10px;
+        padding-bottom: 10px;
+        &:hover{
+            padding-left: 7px;
+            padding-bottom: 7px;
+            width: 55px;
+        }
+    }
+}
 
 
 /* LIL SCREENS*/
@@ -200,10 +224,12 @@ footer{
                 align-items: center;
                 .setmana{
                     width: 100%;
+                    margin-left: -0.5em;
                 }
             }       
         }
    }
    
+  
 
    }

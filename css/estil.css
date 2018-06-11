@@ -217,6 +217,25 @@ footer {
   font-size: 9px;
   background-color: #17b890; }
 
+.logo img {
+  margin-top: 25px;
+  width: 90px;
+  padding-bottom: 10px; }
+  .logo img:hover {
+    width: 93px;
+    padding-bottom: 7px; }
+
+.socialMedia {
+  margin-top: 2em; }
+  .socialMedia img {
+    width: 52px;
+    padding-left: 10px;
+    padding-bottom: 10px; }
+    .socialMedia img:hover {
+      padding-left: 7px;
+      padding-bottom: 7px;
+      width: 55px; }
+
 /* LIL SCREENS*/
 @media only screen and (max-width: 900px) {
   main {
@@ -258,4 +277,5 @@ footer {
       -ms-flex-align: center;
       align-items: center; }
       .programa .programacio-container .programacio-cos .setmana {
-        width: 100%; } }
+        width: 100%;
+        margin-left: -0.5em; } }
